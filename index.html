@@ -2,23 +2,18 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Ev Projesi</title>
-    <style>
-        body { margin: 0; overflow: hidden; background-color: #111; }
-        canvas { display: block; }
-    </style>
-    <!-- Three.js kütüphanesini internetten çağırıyoruz -->
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-            }
-        }
-    </script>
+    <!-- user-scalable=no ile mobilde çift tıklayınca ekranın yakınlaşmasını engelliyoruz -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>3D Ev - Mobil Kontroller</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Mobil Joystick Alanı -->
+    <div id="joystick-container">
+        <div id="joystick-stick"></div>
+    </div>
+
+    <!-- type="module" çok önemli, Three.js'in çalışması için şart -->
     <script type="module" src="app.js"></script>
 </body>
 </html>
