@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Kenarlarda çıkan beyaz boşlukları ve kaydırmayı engeller */
+    background-color: #000;
+}
+
+canvas {
+    display: block;
+}
+
+/* Joystick Dış Çerçeve */
+#joystick-container {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    touch-action: none; /* Tarayıcının varsayılan dokunma olaylarını iptal eder */
+    z-index: 10;
+}
+
+/* Joystick İç Topu */
+#joystick-stick {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* İç topun dokunmayı engellememesi için */
+}
+
